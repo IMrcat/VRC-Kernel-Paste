@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B05788B-6422-4E86-864C-7AFB81B88A98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KernelClient</RootNamespace>
+    <AssemblyName>KernelClient</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="Assembly-CSharp-firstpass" />
+    <Reference Include="DataModel" />
+    <Reference Include="Il2Cppmscorlib" />
+    <Reference Include="Il2CppSystem" />
+    <Reference Include="Il2CppSystem.Core" />
+    <Reference Include="Localization.LocalizableString" />
+    <Reference Include="MelonLoader" />
+    <Reference Include="Photon-DotNet" />
+    <Reference Include="ReMod.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnhollowerBaseLib" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.ParticleSystemModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.SubsystemsModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule" />
+    <Reference Include="UnityEngine.XRModule" />
+    <Reference Include="VRC.Udon" />
+    <Reference Include="VRC.Udon.Common" />
+    <Reference Include="VRC.UI.Core" />
+    <Reference Include="VRC.UI.Elements" />
+    <Reference Include="VRC.UI.Shared" />
+    <Reference Include="VRCCore-Standalone" />
+    <Reference Include="VRCEconomy" />
+    <Reference Include="VRCSDK3" />
+    <Reference Include="VRCSDKBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABS.cs" />
+    <Compile Include="API\APIUtils.cs" />
+    <Compile Include="API\NM\NetworkManagerHooks.cs" />
+    <Compile Include="Auth\KernelAuth.cs" />
+    <Compile Include="AvatarUtil.cs" />
+    <Compile Include="ComponentDisabled.cs" />
+    <Compile Include="ComponentPriority.cs" />
+    <Compile Include="Core\Mono\CustomNameplate.cs" />
+    <Compile Include="Core\Mono\CustomNameplateAccountAge.cs" />
+    <Compile Include="DefaultNamespace\clicktp.cs" />
+    <Compile Include="EmbeddedResourceLoader.cs" />
+    <Compile Include="EmbedExtract.cs" />
+    <Compile Include="EnhancedCombinedExploit.cs" />
+    <Compile Include="ESPSkeletonRenderer.cs" />
+    <Compile Include="EventCodes.cs" />
+    <Compile Include="Features\HighlightsFXSkinned.cs" />
+    <Compile Include="GameObjectExtensions.cs" />
+    <Compile Include="GatherUdon.cs" />
+    <Compile Include="Ghost.cs" />
+    <Compile Include="GiftDisplayManager.cs" />
+    <Compile Include="GUIUtility.cs" />
+    <Compile Include="Handlers\CoroutineHandler.cs" />
+    <Compile Include="HeadRotate.cs" />
+    <Compile Include="HighlightsFXExtensions.cs" />
+    <Compile Include="IFiveSecondTimer.cs" />
+    <Compile Include="infinijump.cs" />
+    <Compile Include="JsonUtility.cs" />
+    <Compile Include="JustH.cs" />
+    <Compile Include="KernelModule.cs" />
+    <Compile Include="Kernel\Resources\Extensions\SerializationUtils.cs" />
+    <Compile Include="keybinds.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="LoggerInstance.cs" />
+    <Compile Include="LSMedia.cs" />
+    <Compile Include="MenuSetup.cs" />
+    <Compile Include="MidnightRooftop.cs" />
+    <Compile Include="Models\PlayerDetails.cs" />
+    <Compile Include="Models\Record.cs" />
+    <Compile Include="Models\Root.cs" />
+    <Compile Include="ModerationNotice.cs" />
+    <Compile Include="Modules\AvatarSaver.cs" />
+    <Compile Include="Modules\ESPConfig.cs" />
+    <Compile Include="Modules\ESP\BatchLineRenderer.cs" />
+    <Compile Include="Modules\Exploits\EONECOLLECTION\EarRape.cs" />
+    <Compile Include="Modules\Exploits\EONECOLLECTION\KE1.cs" />
+    <Compile Include="Modules\Exploits\EONECOLLECTION\Kemono.cs" />
+    <Compile Include="Modules\Exploits\EONECOLLECTION\NE1.cs" />
+    <Compile Include="Modules\Exploits\Fly.cs" />
+    <Compile Include="Modules\Exploits\LoudMicrophone.cs" />
+    <Compile Include="Modules\Exploits\udonnukeF.cs" />
+    <Compile Include="Modules\ForceLewd.cs" />
+    <Compile Include="Modules\KernelLogger.cs" />
+    <Compile Include="Modules\Security\ModerationNotice.cs" />
+    <Compile Include="Modules\Security\Security.cs" />
+    <Compile Include="Modules\Security\SecurityConfig.cs" />
+    <Compile Include="Modules\Target\EnhancedOrbitSystem.cs" />
+    <Compile Include="Modules\Target\MFC.cs" />
+    <Compile Include="Modules\Target\ReMenuLabel.cs" />
+    <Compile Include="Modules\Target\ReMenuManager.cs" />
+    <Compile Include="Modules\Target\ReMenuTooltipManager.cs" />
+    <Compile Include="Modules\Target\Teleport.cs" />
+    <Compile Include="Modules\Target\Tooltip.cs" />
+    <Compile Include="Modules\Target\VoiceMimic.cs" />
+    <Compile Include="Modules\UIManagerr.cs" />
+    <Compile Include="Modules\UnityMainThreadDispatcher.cs" />
+    <Compile Include="Modules\World\BlackCat.cs" />
+    <Compile Include="Modules\World\JustB.cs" />
+    <Compile Include="Modules\World\PrisonEscape.cs" />
+    <Compile Include="Movement.cs" />
+    <Compile Include="ObjectHandler.cs" />
+    <Compile Include="OtherUtil.cs" />
+    <Compile Include="PageNames.cs" />
+    <Compile Include="Patches.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemovePortals.cs" />
+    <Compile Include="Settings\ConfigSave.cs" />
+    <Compile Include="Settings\Setting.cs" />
+    <Compile Include="Settings\Wrappers\HighlightsFXSettings.cs" />
+    <Compile Include="Settings\Wrappers\WavesEffectManager.cs" />
+    <Compile Include="SimpleJson.cs" />
+    <Compile Include="SitOn.cs" />
+    <Compile Include="squidcheat.cs" />
+    <Compile Include="Tags.cs" />
+    <Compile Include="ToastNotif.cs" />
+    <Compile Include="UIBG.cs" />
+    <Compile Include="Utilities\UnityMainThreadDispatcher.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Utils\Adblock.cs" />
+    <Compile Include="Utils\PlayerUtil.cs" />
+    <Compile Include="Vitality\Modules\Exploits\ESP.cs" />
+    <Compile Include="Vitality\Modules\Target\PlayerOrbit.cs" />
+    <Compile Include="VRCApi\Mathfrep.cs" />
+    <Compile Include="VrcExtensions.cs" />
+    <Compile Include="WavUtility.cs" />
+    <Compile Include="Wrapper\CatagoryNames.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets\Amog.png" />
+    <EmbeddedResource Include="assets\config.png" />
+    <EmbeddedResource Include="assets\DxbcShaderFilter.dll" />
+    <EmbeddedResource Include="assets\EI.png" />
+    <EmbeddedResource Include="assets\ERI.png" />
+    <EmbeddedResource Include="assets\Gradient_DarkTeal_REPL.png" />
+    <EmbeddedResource Include="assets\Gradient_DarkTeal_REPL_Old.png" />
+    <EmbeddedResource Include="assets\IOI.png" />
+    <EmbeddedResource Include="assets\Kernel-icon-2025.png" />
+    <EmbeddedResource Include="assets\loading.wav" />
+    <EmbeddedResource Include="assets\Movement.png" />
+    <EmbeddedResource Include="assets\Nightsky.png" />
+    <EmbeddedResource Include="assets\Nuclear_symbol.png" />
+    <EmbeddedResource Include="assets\PD.png" />
+    <EmbeddedResource Include="assets\security.png" />
+    <EmbeddedResource Include="assets\Test.png" />
+    <EmbeddedResource Include="assets\utility.png" />
+    <EmbeddedResource Include="assets\worldcheat.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
